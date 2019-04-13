@@ -31,28 +31,5 @@ module.exports = function(app) {
 
 
 
-module.exports = function(app1) {
 
-
-  // Get all examples
-  app1.get("/api/playbooks", function(req, res) {
-    db.Playbooks.findAll({}).then(function(dbPlaybook) {
-      res.json(dbPlaybook);
-    });
-  });
-
-  // Create a new example
-  app1.post("/api/playbooks", function(req, res) {
-    db.Playbooks.create(req.body).then(function(dbPlaybook) {
-      res.json(dbPlaybook);
-    });
-  });
-
-  // Delete an example by id
-  app1.delete("/api/playbooks/:id", function(req, res) {
-    db.Playbooks.destroy({ where: { id: req.params.id } }).then(function(dbPlaybook) {
-      res.json(dbPlaybook);
-    });
-  });
-};
 

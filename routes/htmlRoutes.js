@@ -30,29 +30,3 @@ module.exports = function(app) {
 
 
 
-module.exports = function(app1) {
-  
-  // Load index page
-  app1.get("/", function(req, res) {
-    db.Playbooks.findAll({}).then(function(dbPlaybook) {
-      res.render("index", {
-        msg: "Welcome!",
-        playbooks: dbPlaybook
-      });
-    });
-  });
-
-  // Load example page and pass in an example by id
-  app1.get("/playbook/:id", function(req, res) {
-    db.Playbooks.findOne({ where: { id: req.params.id } }).then(function(dbPlaybook) {
-      res.render("playbook", {
-        playbooks: dbPlaybook
-      });
-    });
-  });
-
-  // Render 404 page for any unmatched routes
-  app1.get("*", function(req, res) {
-    res.render("404");
-  });
-};
