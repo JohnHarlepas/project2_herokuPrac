@@ -1,0 +1,22 @@
+#omega1 {
+
+    font-size: 24px;
+	font-weight: 800;
+	color: #212529;
+	border-bottom: 1px solid #fbfbfb;
+    margin-bottom: 0;
+    text-indent: 20px;
+
+}
+
+#plyArt {
+    background-color: black;
+}
+
+#photo67,
+#photo68,
+#photo69 {
+    background-color: black;
+    width: 100%,
+
+}
